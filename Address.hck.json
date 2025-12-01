@@ -93,6 +93,21 @@
           "compositeUniqueKey": false,
           "error": {},
           "GUID": "d3f97740-4de2-4c2f-826d-99a01b80b123"
+        },
+        {
+          "name": "Additional Information",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "6d19038f-5653-4c83-b8b9-a5da5dbd61cb",
+          "error": {}
         }
       ],
       "definitions": {
@@ -117,7 +132,8 @@
     "172ef4de-fb50-4087-a44b-9a34e92b1f39": "Postal code",
     "f23a20a2-d7b1-476d-b567-50a67b99f2fc": "City",
     "65b54be5-17e3-480b-9543-41cade950030": "Address ID",
-    "d3f97740-4de2-4c2f-826d-99a01b80b123": "Phone"
+    "d3f97740-4de2-4c2f-826d-99a01b80b123": "Phone",
+    "6d19038f-5653-4c83-b8b9-a5da5dbd61cb": "Additional Information"
   },
   "definitions": {
     "type": "definitions",
@@ -149,7 +165,7 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-12-01T07:33:50.395Z",
+  "lastModifTS": "2025-12-01T07:43:41.397Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -174,8 +190,8 @@
             "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
             "x": 1199.4828571428573,
             "y": 1124.542857142857,
-            "width": 222,
-            "height": 122,
+            "width": 284,
+            "height": 140,
             "color": {
               "hex": "#2196F3"
             }
