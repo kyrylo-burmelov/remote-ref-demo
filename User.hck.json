@@ -15,13 +15,23 @@
           "error": {}
         },
         {
-          "name": "billing_address",
-          "hackoladeMeta": {},
           "isActivated": true,
-          "type": "string",
-          "properties": [],
-          "GUID": "16dc5a3b-1b67-412a-898d-1271b316467d",
-          "error": {}
+          "name": "billing_address",
+          "GUID": "245f30a4-ce1d-4dea-bbc7-367aa94ff29e",
+          "type": "reference",
+          "$ref": "#external/definitions/Address",
+          "refType": "polyglot",
+          "ref": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+          "refIdPath": [
+            "290c7c86-ae0c-4882-a9b7-a4216030877b",
+            "ddcfd7e5-0d1c-4840-aa0c-34a9ff09b4e7",
+            "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7"
+          ],
+          "error": {
+            "name": false,
+            "code": false,
+            "refPath": false
+          }
         }
       ],
       "definitions": {
@@ -45,7 +55,7 @@
   "idToNameHashTable": {
     "595480f8-c4bc-40cc-842a-c80a6720a29c": "User",
     "139f6d32-c1a3-478f-ad9d-46cfff5ecec0": "Name",
-    "16dc5a3b-1b67-412a-898d-1271b316467d": "billing_address"
+    "245f30a4-ce1d-4dea-bbc7-367aa94ff29e": "billing_address"
   },
   "definitions": {
     "type": "definitions",
@@ -54,7 +64,93 @@
   },
   "polyglotDefinitions": {
     "type": "polyglotDefinitions",
-    "properties": [],
+    "properties": [
+      {
+        "name": "Address",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "type": "document",
+        "properties": [
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Address ID",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "65b54be5-17e3-480b-9543-41cade950030"
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Street",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": true,
+            "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
+            "description": "Specifies the street name and number, providing detailed location information within a city or town."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Postal code",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": true,
+            "GUID": "172ef4de-fb50-4087-a44b-9a34e92b1f39",
+            "foreignCollection": "",
+            "foreignField": [],
+            "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "City",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": true,
+            "GUID": "f23a20a2-d7b1-476d-b567-50a67b99f2fc",
+            "foreignCollection": "",
+            "foreignField": [],
+            "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region."
+          },
+          {
+            "type": "numeric",
+            "properties": [],
+            "name": "Phone",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "d3f97740-4de2-4c2f-826d-99a01b80b123"
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Additional details",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "45d3b3da-a843-4070-b50a-786078828201"
+          }
+        ],
+        "additionalProperties": false,
+        "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+        "code": "",
+        "description": "Represents a physical location, including street details, postal code, and city information. Used to store and manage location-based data for individuals, businesses, or properties.",
+        "comments": "",
+        "definitionEntityType": "field",
+        "fieldRelativePath": "#/Address",
+        "link": "Address.hck.json",
+        "kind": "relativePath",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "595480f8-c4bc-40cc-842a-c80a6720a29c",
+            "245f30a4-ce1d-4dea-bbc7-367aa94ff29e"
+          ]
+        ]
+      }
+    ],
     "GUID": "ddcfd7e5-0d1c-4840-aa0c-34a9ff09b4e7"
   },
   "externalDefinitions": {
@@ -70,7 +166,7 @@
   "creationTS": "2025-12-01T08:34:16.185Z",
   "GUID": "290c7c86-ae0c-4882-a9b7-a4216030877b",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-12-01T08:35:33.050Z",
+  "lastModifTS": "2025-12-01T08:38:11.817Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -85,10 +181,10 @@
         "erd": [
           {
             "GUID": "595480f8-c4bc-40cc-842a-c80a6720a29c",
-            "x": 1104,
-            "y": 1101,
-            "width": 257,
-            "height": 110,
+            "x": 1047,
+            "y": 1122,
+            "width": 338,
+            "height": 208,
             "color": {}
           }
         ],
