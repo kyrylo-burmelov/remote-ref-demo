@@ -1,0 +1,138 @@
+{
+  "modelName": "New Model",
+  "collections": [
+    {
+      "collectionName": "User",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "type": "string",
+          "properties": [],
+          "GUID": "928baa95-1159-459f-b6ab-29dcdb6ad797",
+          "error": {}
+        },
+        {
+          "name": "billing_address",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "type": "string",
+          "properties": [],
+          "GUID": "a8c239e7-55ff-42fc-9915-04c6a7127653",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "7bea7c35-2ce6-421e-b767-be05dcf0c7a9"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "894cfa08-f7ca-4e1c-a30e-dcfa560ee846",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    }
+  ],
+  "buckets": [],
+  "views": [],
+  "relationships": [],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "894cfa08-f7ca-4e1c-a30e-dcfa560ee846": "User",
+    "928baa95-1159-459f-b6ab-29dcdb6ad797": "Name",
+    "a8c239e7-55ff-42fc-9915-04c6a7127653": "billing_address"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "22c2eb76-1c8f-4e9c-adfc-65072206b9df"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "671d6d21-fa98-4a7e-8c0b-8d2fa77a7dba"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "9d352a1d-cc4d-4a9e-b948-22e903558b42"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "JSON",
+  "dbVersion": "2019-09",
+  "appTarget": "JSON",
+  "creationTS": "2025-12-01T07:39:13.717Z",
+  "GUID": "17d13591-7f51-4d66-8153-74ca948c8637",
+  "isLineageEnabled": false,
+  "lastModifTS": "2025-12-01T07:40:39.231Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.7.0"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "894cfa08-f7ca-4e1c-a30e-dcfa560ee846",
+            "x": 1341,
+            "y": 1182,
+            "width": 366,
+            "height": 177,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "894cfa08-f7ca-4e1c-a30e-dcfa560ee846"
+          }
+        ],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {}
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
