@@ -45,6 +45,25 @@
       "hackoladeMeta": {
         "validationErrors": {}
       }
+    },
+    {
+      "collectionName": "New Document",
+      "refType": "polyglot",
+      "refNamePath": "#external/definitions/Product",
+      "properties": [],
+      "GUID": "b289735c-8ea4-4de3-b891-608cf0fd6f79",
+      "ref": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+      "refIdPath": [
+        "290c7c86-ae0c-4882-a9b7-a4216030877b",
+        "ddcfd7e5-0d1c-4840-aa0c-34a9ff09b4e7",
+        "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
+      ],
+      "type": "reference",
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "3d35e621-bd9a-4f9c-be5b-2bd27bc12b36"
+      }
     }
   ],
   "buckets": [],
@@ -55,7 +74,8 @@
   "idToNameHashTable": {
     "595480f8-c4bc-40cc-842a-c80a6720a29c": "User",
     "139f6d32-c1a3-478f-ad9d-46cfff5ecec0": "Name",
-    "245f30a4-ce1d-4dea-bbc7-367aa94ff29e": "billing_address"
+    "245f30a4-ce1d-4dea-bbc7-367aa94ff29e": "billing_address",
+    "b289735c-8ea4-4de3-b891-608cf0fd6f79": "New Document"
   },
   "definitions": {
     "type": "definitions",
@@ -149,6 +169,183 @@
             "245f30a4-ce1d-4dea-bbc7-367aa94ff29e"
           ]
         ]
+      },
+      {
+        "name": "Product",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "type": "document",
+        "properties": [
+          {
+            "type": "string",
+            "properties": [],
+            "name": "SKU",
+            "isActivated": true,
+            "primaryKey": true,
+            "required": true,
+            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
+            "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Name",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+            "description": "The name of the product or service as displayed to the customer."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Category name",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
+            "foreignCollection": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+            "foreignField": [
+              "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+              "97db87db-8fbe-41bb-8850-34193c9ee07e"
+            ],
+            "relationshipType": "Foreign Key",
+            "description": "References the category or product group to which this item belongs. This links to a separate Category entity that stores hierarchical or descriptive data about product categories."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Supplier code",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking."
+          },
+          {
+            "type": "string",
+            "properties": [],
+            "name": "Description",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally."
+          },
+          {
+            "type": "array",
+            "properties": [
+              {
+                "type": "string",
+                "properties": [],
+                "isActivated": true,
+                "primaryKey": false,
+                "required": false,
+                "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
+                "arrayItem": true,
+                "displayName": "url",
+                "description": "The direct link or path to the image file. Ensures the platform can retrieve and display product images across various channels."
+              }
+            ],
+            "additionalItems": true,
+            "name": "Images",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
+            "description": "An array of URLs representing images of the product for display on the website. These images enhance the customer experience by providing visual context and details about the product."
+          },
+          {
+            "type": "array",
+            "properties": [
+              {
+                "type": "document",
+                "properties": [
+                  {
+                    "type": "string",
+                    "properties": [],
+                    "name": "Currency",
+                    "isActivated": true,
+                    "required": true,
+                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                    "primaryKey": false,
+                    "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
+                    "enum": [
+                      "USD",
+                      "EUR",
+                      "JPY",
+                      "GBP",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CNY",
+                      "SEK",
+                      "NZD",
+                      "INR",
+                      "MXN",
+                      "SGD",
+                      "HKD"
+                    ],
+                    "description": "Indicates the currency in which the product price is set."
+                  },
+                  {
+                    "type": "numeric",
+                    "properties": [],
+                    "name": "Amount",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": true,
+                    "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "description": "The numeric value of the product’s price in the specified currency."
+                  },
+                  {
+                    "type": "string",
+                    "properties": [],
+                    "name": "Effective date",
+                    "isActivated": true,
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "description": "The date or date/time from which the specified price becomes valid. Enables time-based pricing and helps maintain a historical record of price changes.",
+                    "format": "date"
+                  }
+                ],
+                "additionalProperties": false,
+                "isActivated": true,
+                "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
+                "arrayItem": true,
+                "primaryKey": false,
+                "required": false,
+                "displayName": "Price"
+              }
+            ],
+            "additionalItems": true,
+            "name": "Prices",
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
+            "description": "An array of price records associated with the product, each linked to an **effective date**. This allows for tracking price changes over time and supports promotional pricing strategies."
+          }
+        ],
+        "additionalProperties": false,
+        "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+        "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
+        "comments": "",
+        "definitionEntityType": "field",
+        "fieldRelativePath": "#/Product management/Product",
+        "link": "?g=gitlab&o=kyryloburmelov&r=remote-ref-demo&f=Product.hck.json&b=main",
+        "kind": "link",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "b289735c-8ea4-4de3-b891-608cf0fd6f79"
+          ]
+        ]
       }
     ],
     "GUID": "ddcfd7e5-0d1c-4840-aa0c-34a9ff09b4e7"
@@ -166,7 +363,7 @@
   "creationTS": "2025-12-01T08:34:16.185Z",
   "GUID": "290c7c86-ae0c-4882-a9b7-a4216030877b",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-12-01T08:38:11.817Z",
+  "lastModifTS": "2025-12-01T08:43:32.514Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -185,6 +382,14 @@
             "y": 1122,
             "width": 338,
             "height": 208,
+            "color": {}
+          },
+          {
+            "GUID": "b289735c-8ea4-4de3-b891-608cf0fd6f79",
+            "x": 1060,
+            "y": 1361.5,
+            "width": 368,
+            "height": 330,
             "color": {}
           }
         ],
@@ -218,6 +423,11 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "595480f8-c4bc-40cc-842a-c80a6720a29c"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "b289735c-8ea4-4de3-b891-608cf0fd6f79"
           }
         ],
         "relationshipUpdateDisabled": false
